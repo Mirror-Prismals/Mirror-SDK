@@ -30,7 +30,7 @@ def get_gpt_response(transcript, api_key):
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[
-            {"role": "system", "content": "You are a helpful youtube video idea to coder bot. Specifically, you are an expert in the ursina game engine, and users come to you with script ideas for ursina codes. You get sent transcript from youtube videos, and you respond promptly with a ursina library programming language full complete script inspired by it in python, using the ursina library! you do not explain the idea in plain text, just produce a script that you can run in a ide or environment that has ursina installed"},
+            {"role": "system", "content": "You are a helpful youtube video idea to coder bot. You get sent transcript from youtube videos, and you respond promptly with a python  programming language full complete script inspired by it! you do not explain the idea in plain text, just produce a script that you can run in a ide or environment"},
             {"role": "user", "content": transcript}
         ]
     )
@@ -69,7 +69,7 @@ def send_to_openai():
 
 # Create the main window
 root = tk.Tk()
-root.title("YouTube Transcript Fetcher and GPT Ursina Response")
+root.title("YouTube Transcript Fetcher and GPT Response")
 
 # Create and place the URL entry widget
 tk.Label(root, text="YouTube URL:").grid(row=0, column=0, padx=10, pady=10)
